@@ -1,0 +1,64 @@
+name: Build HQ social previews
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "src/og-v2/**"
+      - "share-v2/**"
+      - ".github/workflows/og-v2.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Arabic rendering
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y librsvg2-bin fonts-noto-core
+
+      - name: Render 1200x630 PNG previews
+        run: |
+          mkdir -p assets/og-v2
+          for f in src/og-v2/*.svg; do
+            name="$(basename "$f" .svg)"
+            rsvg-convert -w 1200 -h 630 -f png -o "assets/og-v2/$name.png" "$f"
+          done
+
+      - name: Commit rendered images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/og-v2
+          if ! git diff --cached --quiet; then
+            git commit -m "Render 1200x630 high quality social previews"
+            git push
+          fi
+
+      - name: Create fresh TinyURL links
+        shell: bash
+        run: |
+          set -euo pipefail
+          shorten() {
+            curl -fsSG "https://tinyurl.com/api-create.php" --data-urlencode "url=$1"
+          }
+          {
+            echo "general=$(shorten 'https://mohabibrahim123-max.github.io/share-v2/')"
+            echo "students=$(shorten 'https://mohabibrahim123-max.github.io/share-v2/students/')"
+            echo "teachers=$(shorten 'https://mohabibrahim123-max.github.io/share-v2/teachers/')"
+            echo "tahsili=$(shorten 'https://mohabibrahim123-max.github.io/share-v2/tahsili/')"
+            echo "qudrat=$(shorten 'https://mohabibrahim123-max.github.io/share-v2/qudrat/')"
+            echo "teacher_ads=$(shorten 'https://mohabibrahim123-max.github.io/share-v2/teacher-ads/')"
+          } > share-v2-links.txt
+
+      - name: Commit fresh short links
+        run: |
+          git add share-v2-links.txt
+          if ! git diff --cached --quiet; then
+            git commit -m "Create fresh HQ share links"
+            git push
+          fi

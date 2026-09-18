@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#071a31"/><stop offset="1" stop-color="#173e69"/></linearGradient>
+  <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f0c36e" stop-opacity=".18"/><stop offset="1" stop-color="#f0c36e" stop-opacity=".03"/></linearGradient>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000" flood-opacity=".28"/></filter>
+  <style>
+    .ar{font-family:'Noto Kufi Arabic','Noto Sans Arabic',sans-serif;direction:rtl}
+    .title{font-family:'Noto Kufi Arabic','Noto Sans Arabic',sans-serif;direction:rtl;font-size:61px;font-weight:900;fill:#fff}
+    .sub{font-family:'Noto Kufi Arabic','Noto Sans Arabic',sans-serif;direction:rtl;font-size:27px;font-weight:500;fill:#dce8f6}
+    .bullet{font-family:'Noto Kufi Arabic','Noto Sans Arabic',sans-serif;direction:rtl;font-size:26px;font-weight:700;fill:#fff}
+    .small{font-family:'Noto Kufi Arabic','Noto Sans Arabic',sans-serif;direction:rtl;font-size:21px;font-weight:700;fill:#f7df9a}
+  </style>
+</defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<circle cx="95" cy="95" r="180" fill="#f0c36e" opacity=".10"/>
+<circle cx="1140" cy="590" r="250" fill="#f0c36e" opacity=".09"/>
+<path d="M0 520 C210 455, 340 600, 550 535 S910 445,1200 520 L1200 630 L0 630 Z" fill="#fff" opacity=".025"/>
+<rect x="58" y="58" width="1084" height="514" rx="34" fill="url(#shine)" stroke="#f0c36e" stroke-opacity=".26" stroke-width="2"/>
+
+<!-- left visual card -->
+<g filter="url(#shadow)">
+  <rect x="78" y="112" width="330" height="390" rx="38" fill="#fbf8f1"/>
+  <rect x="104" y="140" width="278" height="50" rx="16" fill="#10243f"/>
+  <text x="350" y="176" class="small" text-anchor="end">عَلِّمْني</text>
+  <circle cx="243" cy="286" r="72" fill="#f0c36e" opacity=".18"/>
+  <text x="243" y="310" text-anchor="middle" font-size="86" font-family="sans-serif" fill="#f0c36e">⚗</text>
+  <rect x="125" y="385" width="236" height="15" rx="8" fill="#d7deea"/>
+  <rect x="150" y="418" width="186" height="15" rx="8" fill="#d7deea"/>
+  <rect x="118" y="463" width="250" height="46" rx="18" fill="#f0c36e"/>
+  <text x="343" y="495" class="ar" text-anchor="end" font-size="20" font-weight="800" fill="#10243f">ابدأ التحصيلي</text>
+</g>
+
+<!-- right content -->
+<rect x="760" y="95" width="340" height="44" rx="22" fill="#f0c36e" opacity=".95"/>
+<text x="1070" y="125" class="ar" text-anchor="end" font-size="19" font-weight="900" fill="#10243f">منصة علّمني التعليمية</text>
+<text x="1082" y="220" class="title" text-anchor="end">الوحش في التحصيلي</text>
+<text x="1082" y="278" class="sub" text-anchor="end">استعداد أقوى للتحصيلي</text>
+<line x1="610" y1="325" x2="1080" y2="325" stroke="#f0c36e" stroke-width="3" opacity=".55"/>
+<text x="1080" y="385" class="bullet">• حصص مباشرة ومسجلة</text>
+<text x="1080" y="443" class="bullet">• مراجعات وتدريب منتظم</text>
+<text x="1080" y="501" class="bullet">• متابعة منظمة للطالب</text>
+<text x="1082" y="555" class="small" text-anchor="end">اضغط الرابط ← يفتح التطبيق مباشرة</text>
+</svg>
