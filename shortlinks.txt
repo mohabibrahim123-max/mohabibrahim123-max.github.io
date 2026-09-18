@@ -1,5 +1,5 @@
-general=Error, database insert failed
-students=Error, database insert failed
-teachers=Error, database insert failed
-tahsili=Error, database insert failed
-qudrat=Error, database insert failed
+general=https://cleanuri.com/2WM13D
+students=https://cleanuri.com/XwWBkv
+teachers=https://cleanuri.com/B9Rym0
+tahsili=https://cleanuri.com/nmdrkd
+qudrat=https://cleanuri.com/rEV7z3
