@@ -19,7 +19,9 @@ jobs:
         run: |
           set -euo pipefail
           shorten() {
-            curl -fsSG "https://is.gd/create.php"               --data-urlencode "format=simple"               --data-urlencode "url=$1"
+            curl -fsSG "https://v.gd/create.php" \
+              --data-urlencode "format=simple" \
+              --data-urlencode "url=$1"
           }
           HOME_LINK="$(shorten 'https://mohabibrahim123-max.github.io/')"
           STUDENTS_LINK="$(shorten 'https://mohabibrahim123-max.github.io/students/')"
