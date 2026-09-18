@@ -19,9 +19,8 @@ jobs:
         run: |
           set -euo pipefail
           shorten() {
-            curl -fsSG "https://v.gd/create.php" \
-              --data-urlencode "format=simple" \
-              --data-urlencode "url=$1"
+            curl -fsS -X POST "https://cleanuri.com/api/v1/shorten" \
+              -d "url=$1" | jq -r '.result_url'
           }
           HOME_LINK="$(shorten 'https://mohabibrahim123-max.github.io/')"
           STUDENTS_LINK="$(shorten 'https://mohabibrahim123-max.github.io/students/')"
