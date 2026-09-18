@@ -1,0 +1,5 @@
+general=Error, database insert failed
+students=Error, database insert failed
+teachers=Error, database insert failed
+tahsili=Error, database insert failed
+qudrat=Error, database insert failed
