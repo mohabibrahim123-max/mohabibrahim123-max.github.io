@@ -1,0 +1,6 @@
+general=https://tinyurl.com/23po8x69
+students=https://tinyurl.com/278klxc7
+teachers=https://tinyurl.com/2yezpslx
+tahsili=https://tinyurl.com/27mbb7po
+qudrat=https://tinyurl.com/23h59wmj
+teacher_ads=https://tinyurl.com/2bkmxsm4
